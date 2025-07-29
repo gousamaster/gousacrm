@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Separator } from "@/components/ui/separator"
 import { ThemeCustomizer } from "./theme-customizer"
 import { PersonalizationSettings } from "./personalization-settings"
+import { WhatsAppHelpButton } from "./whatsapp-help-button"
+import { DatabaseStatus } from "./database-status"
 
 export default function ConfigPage() {
     return (
@@ -63,6 +65,33 @@ export default function ConfigPage() {
                     </CardContent>
                 </Card>
 
+                {/* Soporte y Ayuda */}
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Soporte y Ayuda</CardTitle>
+                        <CardDescription>¿Necesitas ayuda? Contáctanos directamente</CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <p className="font-medium">Soporte Técnico</p>
+                                <p className="text-sm text-muted-foreground">Obtén ayuda inmediata por WhatsApp</p>
+                            </div>
+                            <WhatsAppHelpButton />
+                        </div>
+
+                        <Separator />
+
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <p className="font-medium">Documentación</p>
+                                <p className="text-sm text-muted-foreground">Guías y tutoriales del sistema</p>
+                            </div>
+                            <button className="text-sm text-primary hover:underline">Ver docs</button>
+                        </div>
+                    </CardContent>
+                </Card>
+
                 {/* Configuración del Sistema */}
                 <Card>
                     <CardHeader>
@@ -75,10 +104,11 @@ export default function ConfigPage() {
                                 <p className="font-medium">Base de Datos</p>
                                 <p className="text-sm text-muted-foreground">Estado de la conexión y configuración</p>
                             </div>
-                            <div className="flex items-center gap-2">
+                            <DatabaseStatus />
+                            {/* <div className="flex items-center gap-2">
                                 <div className="h-2 w-2 bg-green-500 rounded-full"></div>
                                 <span className="text-sm text-muted-foreground">Conectado</span>
-                            </div>
+                            </div> */}
                         </div>
 
                         <Separator />
@@ -86,7 +116,7 @@ export default function ConfigPage() {
                         <div className="flex items-center justify-between">
                             <div>
                                 <p className="font-medium">Respaldo de Datos</p>
-                                <p className="text-sm text-muted-foreground">Último respaldo: Sin respaldo</p>
+                                <p className="text-sm text-muted-foreground">Último respaldo: Sin respaldos</p>
                             </div>
                             <button className="text-sm text-primary hover:underline">Ver detalles</button>
                         </div>

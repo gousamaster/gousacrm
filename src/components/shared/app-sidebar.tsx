@@ -17,7 +17,9 @@ import {
     IconSearch,
     IconSettings,
     IconUsers,
+
 } from "@tabler/icons-react"
+import { GiEagleHead } from 'react-icons/gi';
 
 // import { NavDocuments } from "@/components/nav-documents"
 // import { NavMain } from "@/components/nav-main"
@@ -127,8 +129,9 @@ const data = {
         },
         {
             title: "Obtener Ayuda",
-            url: "#",
+            url: "https://wa.me/59177592025?text=Hola,%20necesito%20ayuda%20con%20GO%20USA%20CRM",
             icon: IconHelp,
+            external: true,
         },
         {
             title: "Buscar",
@@ -166,7 +169,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                             className="data-[slot=sidebar-menu-button]:!p-1.5"
                         >
                             <Link href="/protected">
-                                <IconInnerShadowTop className="!size-5" />
+                                <GiEagleHead className="!size-5" />
                                 <span className="text-base font-semibold">GO USA CRM</span>
                             </Link>
                         </SidebarMenuButton>

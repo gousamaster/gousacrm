@@ -75,7 +75,7 @@ export function PersonalizationSettings() {
                             <SelectContent>
                                 <SelectItem value="es">Español</SelectItem>
                                 <SelectItem value="en">English</SelectItem>
-                                <SelectItem value="pt">Português</SelectItem>
+
                             </SelectContent>
                         </Select>
                     </div>
