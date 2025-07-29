@@ -14,7 +14,7 @@ export default async function ProtectedPage() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
+        {/* <Image
           className="dark:invert"
           src="/next.svg"
           alt="Next.js logo"
@@ -59,9 +59,15 @@ export default async function ProtectedPage() {
           >
             Read our docs
           </a>
+        </div> */}
+        <div className="w-full">
+          <div className="bg-red-500 text-sm p-3 px-5 rounded-md text-white flex gap-3 items-center">
+            <InfoIcon size="16" strokeWidth={2} />
+            Esta es una versión preliminar de la aplicación. algunas funciones podrían no estar disponibles o tener errores.
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      {/* <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -107,7 +113,7 @@ export default async function ProtectedPage() {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+      </footer> */}
     </div>
   )
 }

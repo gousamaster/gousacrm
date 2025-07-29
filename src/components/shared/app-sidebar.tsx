@@ -39,8 +39,8 @@ import { NavUser } from "./nav-user"
 
 const data = {
     user: {
-        name: "shadcn",
-        email: "m@example.com",
+        name: "master",
+        email: "m@gousa.com",
         avatar: "/avatars/shadcn.jpg",
     },
     navMain: [
@@ -66,7 +66,7 @@ const data = {
         },
         {
             title: "Clientes",
-            url: "#",
+            url: "/protected/customers",
             icon: IconUsers,
         },
     ],
