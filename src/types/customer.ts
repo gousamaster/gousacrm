@@ -3,25 +3,25 @@ export interface Customer {
     id: number
     nombres: string
     apellidos: string
-    fechaNacimiento?: string | null // date() devuelve string
+    fechaNacimiento?: string | null
     lugarNacimiento?: string | null
     numeroCi?: string | null
     numeroPasaporte?: string | null
-    pasaporteFechaEmision?: string | null // date() devuelve string
-    pasaporteFechaExpiracion?: string | null // date() devuelve string
+    pasaporteFechaEmision?: string | null
+    pasaporteFechaExpiracion?: string | null
     email?: string | null
     telefonoCelular?: string | null
     direccionDomicilio?: string | null
     estadoCivil?: string | null
     profesion?: string | null
     conyugeNombreCompleto?: string | null
-    conyugeFechaNacimiento?: string | null // date() devuelve string
+    conyugeFechaNacimiento?: string | null
     conyugeLugarNacimiento?: string | null
-    matrimonioFechaInicio?: string | null // date() devuelve string
-    matrimonioFechaFin?: string | null // date() devuelve string
-    fechaCreacion: Date // timestamp() devuelve Date
-    fechaModificacion: Date // timestamp() devuelve Date
-    fechaEliminacion?: Date | null // timestamp() devuelve Date
+    matrimonioFechaInicio?: string | null
+    matrimonioFechaFin?: string | null
+    fechaCreacion: Date
+    fechaModificacion: Date
+    fechaEliminacion?: Date | null
 }
 
 export interface CreateCustomerData {

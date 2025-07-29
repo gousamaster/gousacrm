@@ -24,7 +24,7 @@ export function CustomerDrawer({ open, onOpenChange, customer, onSuccess }: Cust
 
     return (
         <Sheet open={open} onOpenChange={onOpenChange}>
-            <SheetContent side="left" className="w-full sm:max-w-md">
+            <SheetContent side="right" className="w-full sm:max-w-md">
                 <SheetHeader>
                     <SheetTitle>{customer ? "Editar Cliente" : "Nuevo Cliente"}</SheetTitle>
                     <SheetDescription>
