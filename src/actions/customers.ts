@@ -2,7 +2,7 @@
 
 import { db } from "@/lib/db"
 import { clientes } from "@/lib/db/schema"
-import { eq, isNull, or, ilike, and, type SQL } from "drizzle-orm"
+import { eq, isNull, or, ilike, and, desc, type SQL } from "drizzle-orm"
 import { revalidatePath } from "next/cache"
 import type { CreateCustomerData, UpdateCustomerData } from "@/types/customer"
 
@@ -36,7 +36,7 @@ export async function getCustomers(searchTerm?: string) {
         const whereCondition = conditions.length === 1 ? conditions[0] : and(...conditions)
 
         // Ejecutar la query
-        const result = await db.select().from(clientes).where(whereCondition).orderBy(clientes.fechaCreacion)
+        const result = await db.select().from(clientes).where(whereCondition).orderBy(desc(clientes.fechaCreacion))
 
         console.log("✅ Clientes encontrados:", result.length)
         if (result.length > 0) {
