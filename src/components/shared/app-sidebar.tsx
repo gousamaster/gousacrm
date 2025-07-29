@@ -36,6 +36,7 @@ import { NavMain } from "./nav-main"
 import { NavDocuments } from "./nav-documents"
 import { NavSecondary } from "./nav-secondary"
 import { NavUser } from "./nav-user"
+import Link from "next/link"
 
 const data = {
     user: {
@@ -46,7 +47,7 @@ const data = {
     navMain: [
         {
             title: "Dashboard",
-            url: "#",
+            url: "/protected",
             icon: IconDashboard,
         },
         {
@@ -121,7 +122,7 @@ const data = {
     navSecondary: [
         {
             title: "Configuraciones",
-            url: "#",
+            url: "/protected/config",
             icon: IconSettings,
         },
         {
@@ -164,10 +165,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                             asChild
                             className="data-[slot=sidebar-menu-button]:!p-1.5"
                         >
-                            <a href="#">
+                            <Link href="/protected">
                                 <IconInnerShadowTop className="!size-5" />
                                 <span className="text-base font-semibold">GO USA CRM</span>
-                            </a>
+                            </Link>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                 </SidebarMenu>

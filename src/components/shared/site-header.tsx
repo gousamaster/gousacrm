@@ -11,7 +11,7 @@ export function SiteHeader() {
                     orientation="vertical"
                     className="mx-2 data-[orientation=vertical]:h-4"
                 />
-                <h1 className="text-base font-medium">BETA V.0.0.63</h1>
+                <h1 className="text-base font-medium">BETA V.0.0.82</h1>
                 <div className="ml-auto flex items-center gap-2">
                     {/* <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
                         <a
