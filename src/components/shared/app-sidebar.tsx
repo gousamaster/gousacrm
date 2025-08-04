@@ -64,7 +64,7 @@ const data = {
         },
         {
             title: "Trámites",
-            url: "#",
+            url: "/protected/tramites",
             icon: IconFolder,
         },
         {
