@@ -200,8 +200,8 @@ export function CustomerFormComplete({ customer, onSuccess, onCancel }: Customer
                             {errors.email && <p className="text-sm text-red-500">{errors.email.message}</p>}
                         </div>
                         <div className="space-y-2">
-                            <Label htmlFor="telefonoCelular">Teléfono Celular</Label>
-                            <Input id="telefonoCelular" {...register("telefonoCelular")} placeholder="+591 70123456" />
+                            <Label htmlFor="telefonoCelular">Teléfono Celular *</Label>
+                            <Input id="telefonoCelular" {...register("telefonoCelular")} placeholder="+591 70123456" required />
                         </div>
                     </div>
 
