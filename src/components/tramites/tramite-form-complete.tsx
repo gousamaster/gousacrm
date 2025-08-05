@@ -18,7 +18,7 @@ import {
     getEstadosProceso,
     getEstadosPago,
     getClientesForSelect,
-    getUsuariosForSelect,
+    getUsuarios, // CORREGIDO: cambié getUsuariosForSelect por getUsuarios
 } from "@/actions/tramites"
 import type { Tramite, CreateTramiteData, TipoTramite, EstadoProceso, EstadoPago } from "@/types/tramite"
 
@@ -102,7 +102,7 @@ export function TramiteFormComplete({ tramite, onSuccess, onCancel }: TramiteFor
                     getEstadosProceso(),
                     getEstadosPago(),
                     getClientesForSelect(),
-                    getUsuariosForSelect(),
+                    getUsuarios(), // CORREGIDO: cambié getUsuariosForSelect por getUsuarios
                 ])
 
                 if (tiposRes.success) setTiposTramite(tiposRes.data || [])
@@ -154,21 +154,20 @@ export function TramiteFormComplete({ tramite, onSuccess, onCancel }: TramiteFor
                 <div className="space-y-4">
                     <h3 className="text-lg font-semibold">Información del Trámite</h3>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="flex flex-col gap-4">
                         <div className="space-y-2">
                             <Label htmlFor="clienteId">Cliente *</Label>
                             <Select
                                 value={watchedValues.clienteId?.toString() || "0"}
                                 onValueChange={(value) => setValue("clienteId", Number.parseInt(value))}
                             >
-                                <SelectTrigger>
+                                <SelectTrigger className="w-full">
                                     <SelectValue placeholder="Seleccionar cliente" />
                                 </SelectTrigger>
                                 <SelectContent>
                                     {clientes.map((cliente) => (
                                         <SelectItem key={cliente.id} value={cliente.id.toString()}>
                                             {cliente.nombres} {cliente.apellidos}
-                                            {cliente.email && ` (${cliente.email})`}
                                         </SelectItem>
                                     ))}
                                 </SelectContent>
@@ -182,7 +181,7 @@ export function TramiteFormComplete({ tramite, onSuccess, onCancel }: TramiteFor
                                 value={watchedValues.usuarioAsignadoId || "0"}
                                 onValueChange={(value) => setValue("usuarioAsignadoId", value)}
                             >
-                                <SelectTrigger>
+                                <SelectTrigger className="w-full">
                                     <SelectValue placeholder="Seleccionar usuario" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -197,14 +196,14 @@ export function TramiteFormComplete({ tramite, onSuccess, onCancel }: TramiteFor
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="flex flex-col gap-4">
                         <div className="space-y-2">
                             <Label htmlFor="tipoTramiteId">Tipo de Trámite *</Label>
                             <Select
                                 value={watchedValues.tipoTramiteId?.toString() || "0"}
                                 onValueChange={(value) => setValue("tipoTramiteId", Number.parseInt(value))}
                             >
-                                <SelectTrigger>
+                                <SelectTrigger className="w-full">
                                     <SelectValue placeholder="Seleccionar tipo" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -224,7 +223,7 @@ export function TramiteFormComplete({ tramite, onSuccess, onCancel }: TramiteFor
                                 value={watchedValues.estadoProcesoId?.toString() || "0"}
                                 onValueChange={(value) => setValue("estadoProcesoId", Number.parseInt(value))}
                             >
-                                <SelectTrigger>
+                                <SelectTrigger className="w-full">
                                     <SelectValue placeholder="Seleccionar estado" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -244,7 +243,7 @@ export function TramiteFormComplete({ tramite, onSuccess, onCancel }: TramiteFor
                                 value={watchedValues.estadoPagoId?.toString() || "0"}
                                 onValueChange={(value) => setValue("estadoPagoId", Number.parseInt(value))}
                             >
-                                <SelectTrigger>
+                                <SelectTrigger className="w-full">
                                     <SelectValue placeholder="Seleccionar estado" />
                                 </SelectTrigger>
                                 <SelectContent>

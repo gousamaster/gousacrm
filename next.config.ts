@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '50mb', // Aumentar límite para server actions
+    },
+  },
   eslint: {
     // Ignorar errores de ESLint durante el build
     ignoreDuringBuilds: true,
@@ -11,6 +16,11 @@ const nextConfig: NextConfig = {
   },
   images: {
     unoptimized: true,
+  },
+  api: {
+    bodyParser: {
+      sizeLimit: '50mb',
+    },
   },
 };
 

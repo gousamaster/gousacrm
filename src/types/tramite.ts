@@ -21,8 +21,8 @@ export interface Tramite {
         id: number
         nombres: string
         apellidos: string
-        email: string | null // Cambiar de opcional a requerido con null
-        telefonoCelular: string | null // Cambiar de opcional a requerido con null
+        email: string | null
+        telefonoCelular: string | null
     } | null
     usuarioAsignado: {
         id: string
@@ -61,6 +61,17 @@ export interface UpdateTramiteData extends Partial<CreateTramiteData> {
     id: number
 }
 
+// Nuevo tipo para filtros de trámites
+export interface TramiteFilters {
+    clienteId?: number
+    tipoTramiteId?: number
+    estadoProcesoId?: number
+    estadoPagoId?: number
+    fechaDesde?: string
+    fechaHasta?: string
+    searchTerm?: string
+}
+
 // Tipos para los catálogos
 export interface TipoTramite {
     id: number
@@ -75,4 +86,12 @@ export interface EstadoProceso {
 export interface EstadoPago {
     id: number
     nombreEstado: string
+}
+
+// Tipo para el selector de trámites
+export interface TramiteForSelect {
+    id: number
+    clienteNombres: string | null
+    clienteApellidos: string | null
+    tipoTramite: string | null
 }

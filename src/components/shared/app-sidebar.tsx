@@ -53,14 +53,9 @@ const data = {
             icon: IconDashboard,
         },
         {
-            title: "Lifecycle",
-            url: "#",
-            icon: IconListDetails,
-        },
-        {
-            title: "Analiticas",
-            url: "#",
-            icon: IconChartBar,
+            title: "Clientes",
+            url: "/protected/customers",
+            icon: IconUsers,
         },
         {
             title: "Trámites",
@@ -68,9 +63,14 @@ const data = {
             icon: IconFolder,
         },
         {
-            title: "Clientes",
-            url: "/protected/customers",
-            icon: IconUsers,
+            title: "Citas",
+            url: "/protected/citas",
+            icon: IconListDetails,
+        },
+        {
+            title: "Analiticas",
+            url: "#",
+            icon: IconChartBar,
         },
     ],
     navClouds: [
@@ -133,26 +133,26 @@ const data = {
             icon: IconHelp,
             external: true,
         },
-        {
-            title: "Buscar",
-            url: "#",
-            icon: IconSearch,
-        },
+        // {
+        //     title: "Buscar",
+        //     url: "#",
+        //     icon: IconSearch,
+        // },
     ],
     documents: [
-        {
-            name: "Libreria de Datos",
-            url: "#",
-            icon: IconDatabase,
-        },
-        {
-            name: "Reportes",
-            url: "#",
-            icon: IconReport,
-        },
+        // {
+        //     name: "Libreria de Datos",
+        //     url: "#",
+        //     icon: IconDatabase,
+        // },
+        // {
+        //     name: "Reportes",
+        //     url: "#",
+        //     icon: IconReport,
+        // },
         {
             name: "Asistente de documentos",
-            url: "#",
+            url: "/protected/documentos",
             icon: IconFileWord,
         },
     ],

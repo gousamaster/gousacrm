@@ -36,10 +36,10 @@ export default function TramitesPage() {
     const [tramiteToDelete, setTramiteToDelete] = useState<Tramite | null>(null)
 
     // Cargar trámites
-    const loadTramites = async (search?: string) => {
+    const loadTramites = async () => {
         setLoading(true)
         try {
-            const result = await getTramites(search)
+            const result = await getTramites()
             if (result.success) {
                 setTramites(result.data || [])
                 console.log("📊 Trámites cargados:", result.data?.length || 0)
@@ -143,7 +143,7 @@ export default function TramitesPage() {
         if (tramiteToDelete) {
             const result = await deleteTramite(tramiteToDelete.id)
             if (result.success) {
-                await loadTramites(searchTerm)
+                await loadTramites()
             }
             setDeleteDialogOpen(false)
             setTramiteToDelete(null)
@@ -152,7 +152,7 @@ export default function TramitesPage() {
 
     // Manejar éxito en formulario
     const handleFormSuccess = async () => {
-        await loadTramites(searchTerm)
+        await loadTramites()
     }
 
     // Mostrar skeleton mientras carga
