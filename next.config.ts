@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   typescript: {
-    // Opcional: también ignorar errores de TypeScript si los hay
+    // Opcional: también ignorar errores de TypeScript si los hay aca
     ignoreBuildErrors: true,
   },
   images: {
