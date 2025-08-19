@@ -19,6 +19,7 @@ export interface Customer {
     conyugeLugarNacimiento?: string | null
     matrimonioFechaInicio?: string | null
     matrimonioFechaFin?: string | null
+    motivoRecoleccionDatos?: string | null
     fechaCreacion: Date
     fechaModificacion: Date
     fechaEliminacion?: Date | null
@@ -43,6 +44,7 @@ export interface CreateCustomerData {
     conyugeLugarNacimiento?: string
     matrimonioFechaInicio?: string
     matrimonioFechaFin?: string
+    motivoRecoleccionDatos?: string
 }
 
 export interface UpdateCustomerData extends Partial<CreateCustomerData> {

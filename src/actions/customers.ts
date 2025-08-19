@@ -24,6 +24,7 @@ export async function getCustomers(searchTerm?: string) {
                 ilike(clientes.numeroCi, searchPattern),
                 ilike(clientes.numeroPasaporte, searchPattern),
                 ilike(clientes.email, searchPattern),
+                ilike(clientes.motivoRecoleccionDatos, searchPattern)
             )
 
             // Solo agregar si searchCondition no es undefined
@@ -82,6 +83,7 @@ export async function createCustomer(data: CreateCustomerData) {
             conyugeLugarNacimiento: data.conyugeLugarNacimiento || null,
             matrimonioFechaInicio: data.matrimonioFechaInicio || null,
             matrimonioFechaFin: data.matrimonioFechaFin || null,
+            motivoRecoleccionDatos: data.motivoRecoleccionDatos || null,
         }
 
         const result = await db.insert(clientes).values(processedData).returning()
@@ -129,6 +131,7 @@ export async function updateCustomer(data: UpdateCustomerData) {
             conyugeLugarNacimiento: updateData.conyugeLugarNacimiento || null,
             matrimonioFechaInicio: updateData.matrimonioFechaInicio || null,
             matrimonioFechaFin: updateData.matrimonioFechaFin || null,
+            motivoRecoleccionDatos: updateData.motivoRecoleccionDatos || null,
             fechaModificacion: new Date(),
         }
 

@@ -54,6 +54,7 @@ export const clientes = pgTable('clientes', {
     conyugeLugarNacimiento: varchar('conyuge_lugar_nacimiento', { length: 255 }),
     matrimonioFechaInicio: date('matrimonio_fecha_inicio'),
     matrimonioFechaFin: date('matrimonio_fecha_fin'),
+    motivoRecoleccionDatos: text('motivo_recoleccion_datos'),
     fechaCreacion: timestamp('fecha_creacion').defaultNow().notNull(),
     fechaModificacion: timestamp('fecha_modificacion').defaultNow().notNull(),
     fechaEliminacion: timestamp('fecha_eliminacion'),

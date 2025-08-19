@@ -34,6 +34,7 @@ const customerSchema = z.object({
     conyugeLugarNacimiento: z.string().optional(),
     matrimonioFechaInicio: z.string().optional(),
     matrimonioFechaFin: z.string().optional(),
+    motivoRecoleccionDatos: z.string().optional(),
 })
 
 interface CustomerFormProps {
@@ -74,6 +75,7 @@ export function CustomerFormComplete({ customer, onSuccess, onCancel }: Customer
                 conyugeLugarNacimiento: customer.conyugeLugarNacimiento || "",
                 matrimonioFechaInicio: customer.matrimonioFechaInicio || "",
                 matrimonioFechaFin: customer.matrimonioFechaFin || "",
+                motivoRecoleccionDatos: customer.motivoRecoleccionDatos || "",
             }
             : {
                 nombres: "",
@@ -94,6 +96,7 @@ export function CustomerFormComplete({ customer, onSuccess, onCancel }: Customer
                 conyugeLugarNacimiento: "",
                 matrimonioFechaInicio: "",
                 matrimonioFechaFin: "",
+                motivoRecoleccionDatos: "",
             },
     })
 
@@ -281,6 +284,18 @@ export function CustomerFormComplete({ customer, onSuccess, onCancel }: Customer
                     </div>
                 </div>
 
+                <Separator />
+
+                {/* Motivo de Recolección de Datos */}
+                <div className="space-y-4">
+                    <h3 className="text-lg font-semibold">Motivo de Recolección de Datos</h3>
+                    <Textarea
+                        id="motivoRecoleccionDatos"
+                        {...register("motivoRecoleccionDatos")}
+                        placeholder="Descripción del motivo por el cual se recolectan los datos del cliente"
+                        rows={3}
+                    />
+                </div>
                 {/* Error message */}
                 {error && <div className="text-sm text-red-500 bg-red-50 p-3 rounded-md">{error}</div>}
 

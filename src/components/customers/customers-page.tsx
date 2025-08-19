@@ -204,6 +204,7 @@ export default function CustomersPage() {
                                     <TableCell>{customer.telefonoCelular || "-"}</TableCell>
                                     <TableCell>{customer.numeroCi || customer.numeroPasaporte || "-"}</TableCell>
                                     <TableCell>{customer.estadoCivil || "-"}</TableCell>
+                                    <TableCell>{customer.motivoRecoleccionDatos || "-"}</TableCell>
                                     <TableCell>{new Date(customer.fechaCreacion).toLocaleDateString("es-ES")}</TableCell>
                                     <TableCell>
                                         <DropdownMenu>

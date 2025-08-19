@@ -1,0 +1,1 @@
+ALTER TABLE "clientes" ADD COLUMN "motivo_recoleccion_datos" text;
