@@ -31,15 +31,15 @@ export default function ConfigPage() {
 
                         <Separator />
 
-                        <div>
+                        {/* <div>
                             <h3 className="text-lg font-medium mb-4">Preferencias</h3>
                             <PersonalizationSettings />
-                        </div>
+                        </div> */}
                     </CardContent>
                 </Card>
 
                 {/* Configuración de Cuenta */}
-                <Card>
+                {/* <Card>
                     <CardHeader>
                         <CardTitle>Configuración de Cuenta</CardTitle>
                         <CardDescription>Gestiona tu perfil y preferencias de cuenta</CardDescription>
@@ -63,7 +63,7 @@ export default function ConfigPage() {
                             <button className="text-sm text-primary hover:underline">Configurar</button>
                         </div>
                     </CardContent>
-                </Card>
+                </Card> */}
 
                 {/* Soporte y Ayuda */}
                 <Card>
@@ -80,7 +80,7 @@ export default function ConfigPage() {
                             <WhatsAppHelpButton />
                         </div>
 
-                        <Separator />
+                        {/* <Separator />
 
                         <div className="flex items-center justify-between">
                             <div>
@@ -88,7 +88,7 @@ export default function ConfigPage() {
                                 <p className="text-sm text-muted-foreground">Guías y tutoriales del sistema</p>
                             </div>
                             <button className="text-sm text-primary hover:underline">Ver docs</button>
-                        </div>
+                        </div> */}
                     </CardContent>
                 </Card>
 
@@ -111,7 +111,7 @@ export default function ConfigPage() {
                             </div> */}
                         </div>
 
-                        <Separator />
+                        {/* <Separator />
 
                         <div className="flex items-center justify-between">
                             <div>
@@ -119,7 +119,7 @@ export default function ConfigPage() {
                                 <p className="text-sm text-muted-foreground">Último respaldo: Sin respaldos</p>
                             </div>
                             <button className="text-sm text-primary hover:underline">Ver detalles</button>
-                        </div>
+                        </div> */}
                     </CardContent>
                 </Card>
             </div>

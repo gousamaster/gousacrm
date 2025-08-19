@@ -50,7 +50,7 @@ export function UserInfo({ showEmail = true, showAvatar = true, size = "md" }: U
                 )}
                 <div>
                     <p className="text-sm font-medium">Usuario no encontrado</p>
-                    {showEmail && <p className="text-xs text-muted-foreground">Sin email</p>}
+                    {showEmail && <p className="text-xs">Sin email</p>}
                 </div>
             </div>
         )
@@ -70,7 +70,7 @@ export function UserInfo({ showEmail = true, showAvatar = true, size = "md" }: U
             )}
             <div>
                 <p className="text-sm font-medium">{user.name}</p>
-                {showEmail && <p className="text-xs text-muted-foreground">{user.email}</p>}
+                {showEmail && <p className="text-xs">{user.email}</p>}
             </div>
         </div>
     )

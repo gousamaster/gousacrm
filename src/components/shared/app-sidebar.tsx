@@ -39,6 +39,7 @@ import { NavDocuments } from "./nav-documents"
 import { NavSecondary } from "./nav-secondary"
 import { NavUser } from "./nav-user"
 import Link from "next/link"
+import Image from "next/image";
 
 const data = {
     user: {
@@ -169,7 +170,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                             className="data-[slot=sidebar-menu-button]:!p-1.5"
                         >
                             <Link href="/protected">
-                                <GiEagleHead className="!size-5" />
+                                <Image
+                                    src="/gousa.png"
+                                    alt="GO USA CRM Logo"
+                                    width={30}
+                                    height={30}
+                                    className="rounded-full"
+                                />
                                 <span className="text-base font-semibold">GO USA CRM</span>
                             </Link>
                         </SidebarMenuButton>
